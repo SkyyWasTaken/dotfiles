@@ -16,10 +16,14 @@ in
     experimental-features = [ "nix-command" "flakes" ];
   };
 
+  # Enable graphics
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
+  # Enable lact
+  services.lact.enable = true;
+  hardware.amdgpu.overdrive.enable = true;
 
   # Opentabletdriver stuff
   hardware.opentabletdriver.enable = true;
