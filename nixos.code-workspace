@@ -8,5 +8,8 @@
       "path": "./nixos",
       "name": "NixOS"
     }
-  ]
+  ],
+  "settings": {
+    "files.autoSave": "onFocusChange"
+  }
 }
