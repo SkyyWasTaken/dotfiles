@@ -21,9 +21,7 @@ in
     steam
     pavucontrol
     prismlauncher
-    firefox
-    musescore
-    muse-sounds-manager
+    olympus
   ];
 
   programs.git = {
