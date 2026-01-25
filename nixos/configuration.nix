@@ -4,10 +4,12 @@
 
 { inputs, config, lib, pkgs, ... }:
 
+let 
+  vars = import ./variables.nix;
+in
 {
   imports = [
     ./hardware-configuration.nix
-    ./variables.nix
   ];
   # Enable Flakes
   nix.settings = {
@@ -44,7 +46,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "dogger-pc";
+  networking.hostName = vars.hostname;
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
@@ -55,7 +57,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     font = "Lat2-Terminus16";
-    keyMap = "dvorak";
+    keyMap = vars.kbLayout;
   };
 
   # Enable CUPS to print documents.
@@ -74,14 +76,14 @@
     alsa.support32Bit = true;
   };
 
-  users.users."${config.defaultUser}" = {
+  users.users."${vars.defaultUser}" = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # enable 'sudo' for the user.
   };
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users."${config.defaultUser}" = import ./home/home.nix;
+  home-manager.users."${vars.defaultUser}" = import ./home/home.nix;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).

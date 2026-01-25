@@ -1,11 +1,11 @@
 { config, pkgs, ... }:
 
+let 
+  vars = import ../variables.nix;
+in
 {
-  imports = [
-    ../variables.nix
-  ];
-  home.username = config.defaultUser;
-  home.homeDirectory = "/home/${config.defaultUser}";
+  home.username = vars.defaultUser;
+  home.homeDirectory = "/home/${vars.defaultUser}";
   home.packages = with pkgs; [
     alacritty
     bitwarden-desktop
@@ -30,8 +30,8 @@
   programs.git = {
     enable = true;
     settings = {
-      user.name = config.gitUsername;
-      user.email = config.gitEmail;
+      user.name = vars.gitUsername;
+      user.email = vars.gitEmail;
       init.defaultBranch = "main";
     };
   };

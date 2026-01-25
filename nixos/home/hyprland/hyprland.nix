@@ -1,3 +1,6 @@
+let 
+  vars = import ../../variables.nix;
+in
 {
   "$mod" = "SUPER";
   monitor = [
@@ -44,9 +47,8 @@
     "$mod, mouse:273, resizewindow" # right click
   ];
   input = {
-    kb_layout = "us,us";
-    kb_variant = "dvorak, ";
-    kb_options = "grp:alt_shift:toggle";
+    kb_layout = vars.kbLayout;
+    kb_variant = vars.kbVariant;
     accel_profile = "flat";
     force_no_accel = true;
     sensitivity = 0;
