@@ -15,14 +15,14 @@ in
     hyprcursor
     killall
     krita
-    rose-pine-cursor
-    rose-pine-hyprcursor
-    spotify
-    steam
     pavucontrol
     prismlauncher
     (olympus.override { celesteWrapper = "steam-run";})
     onlyoffice-desktopeditors
+    rose-pine-cursor
+    rose-pine-hyprcursor
+    spotify
+    steam
   ];
 
   programs.git = {
