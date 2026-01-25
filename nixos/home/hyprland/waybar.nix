@@ -160,6 +160,11 @@ tooltip label {
 	border-color: @mauve;
 }
 
+#workspaces button.empty {
+	opacity: 0.3;
+	background: @background-secondary;
+}
+
 #workspaces button.active,
 #workspaces button.focused {
 	background: @mauve;
@@ -167,11 +172,6 @@ tooltip label {
 	font-weight: bold;
 	opacity: 1;
 	border-color: @pink;
-}
-
-#workspaces button.empty {
-	opacity: 0.3;
-	background: @background-secondary;
 }
 
 #workspaces button.urgent {
