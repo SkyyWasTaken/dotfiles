@@ -22,6 +22,7 @@ in
     pavucontrol
     prismlauncher
     olympus
+    onlyoffice-desktopeditors
   ];
 
   programs.git = {
