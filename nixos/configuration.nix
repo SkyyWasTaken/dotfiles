@@ -92,6 +92,7 @@ in
       git
       wget
       opentabletdriver
+      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
     pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   };
