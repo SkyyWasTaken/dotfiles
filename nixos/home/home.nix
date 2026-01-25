@@ -21,7 +21,6 @@ in
     steam
     pavucontrol
     prismlauncher
-    brave
     firefox
     musescore
     muse-sounds-manager
