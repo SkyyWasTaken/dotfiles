@@ -21,7 +21,7 @@ in
     steam
     pavucontrol
     prismlauncher
-    olympus
+    (olympus.override { celesteWrapper = "steam-run";})
     onlyoffice-desktopeditors
   ];
 
