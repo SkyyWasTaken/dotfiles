@@ -23,6 +23,7 @@ in
     rose-pine-hyprcursor
     spotify
     steam
+    telegram-desktop
   ];
 
   programs.git = {
