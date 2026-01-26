@@ -24,6 +24,7 @@ in
     spotify
     steam
     telegram-desktop
+    unzip
   ];
 
   programs.git = {
