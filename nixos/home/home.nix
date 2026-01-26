@@ -25,6 +25,7 @@ in
     steam
     telegram-desktop
     unzip
+    protontricks
   ];
 
   programs.git = {
