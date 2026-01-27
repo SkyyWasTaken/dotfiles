@@ -68,6 +68,32 @@ in
     };
   };
   
+  gtk = {
+    enable = true;
+    colorScheme = "dark";
+    cursorTheme = {
+      package = pkgs.rose-pine-cursor;
+      name = "BreezeX-RosePine-Linux";
+      size = 28;
+    };
+    iconTheme = {
+      package = pkgs.rose-pine-icon-theme;
+      name = "rose-pine-dawn";
+    };
+    theme = {
+      package = pkgs.rose-pine-gtk-theme;
+      name = "rose-pine-dawn";
+    };
+  };
+
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    name = "BreezeX-RosePine-Linux";
+    size = 28;
+    package = pkgs.rose-pine-cursor;
+  };
+
   # Recommended defaults
   programs.bash.enable = true;
 

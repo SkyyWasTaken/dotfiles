@@ -101,6 +101,9 @@ in
     alsa.support32Bit = true;
   };
 
+  # Enable dconf for GTK themes
+  programs.dconf.enable = true;
+
   users.users."${vars.defaultUser}" = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # enable 'sudo' for the user.
