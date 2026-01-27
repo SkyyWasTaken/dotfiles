@@ -15,6 +15,7 @@ in
     "$mod, C, exec, hyprctl dispatch dpms on"
     "$mod, R, exec, hyprctl dispatch dpms off"
     "CTRLALT, semicolon, killactive,"
+    "CTRLALTSHIFT, semicolon, exec, hyprctl kill"
     "$mod, F, fullscreen"
     "$mod SHIFT, S, exec, grimblast copy area"
 
