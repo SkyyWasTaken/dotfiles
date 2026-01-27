@@ -89,6 +89,10 @@ in
     openFirewall = true;
   };
 
+  # Enable extra services used by thunar
+  services.gvfs.enable = true;
+  services.tumbler.enable = true;
+
   # Enable sound.
   services.pipewire = {
     enable = true;
@@ -129,6 +133,15 @@ in
     mplus-outline-fonts.githubRelease
     dina-font
     proggyfonts
+  ];
+
+  # Enable Thunar
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+    thunar-media-tags-plugin
   ];
 
   # Open ports in the firewall.
