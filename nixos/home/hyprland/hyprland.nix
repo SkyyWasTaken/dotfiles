@@ -116,4 +116,7 @@ in
     "HYPRCURSOR_SIZE,28"
     "EDITOR,code --wait"
   ];
+  windowrulev2 = [
+    "tile, class:^steam$"
+  ];
 }
