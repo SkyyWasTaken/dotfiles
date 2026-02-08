@@ -11,6 +11,7 @@ in
     bitwarden-desktop
     discord
     gcr  # gnome keyring
+    git-credential-manager
     grimblast
     hyprcursor
     killall
@@ -34,6 +35,11 @@ in
       user.name = vars.gitUsername;
       user.email = vars.gitEmail;
       init.defaultBranch = "main";
+    };
+    extraConfig.credential = {
+      helper = "manager";
+      "https://github.com".username = "YourUserName";
+      credentialStore = "cache";
     };
   };
 
