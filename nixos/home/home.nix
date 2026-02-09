@@ -16,6 +16,7 @@ in
     hyprcursor
     killall
     krita
+    nodejs_24
     pavucontrol
     prismlauncher
     (olympus.override { celesteWrapper = "steam-run";})
