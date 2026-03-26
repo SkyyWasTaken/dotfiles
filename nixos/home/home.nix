@@ -36,11 +36,11 @@ in
       user.name = vars.gitUsername;
       user.email = vars.gitEmail;
       init.defaultBranch = "main";
-    };
-    extraConfig.credential = {
+      credential {
       helper = "manager";
       "https://github.com".username = "YourUserName";
       credentialStore = "cache";
+      }
     };
   };
 

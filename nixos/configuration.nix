@@ -116,12 +116,6 @@ in
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment = {
-    systemPackages = with pkgs; [
-      git
-      wget
-      opentabletdriver
-      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    ];
     pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
   };
 
