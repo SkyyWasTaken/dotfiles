@@ -37,14 +37,14 @@
             dbus
             at-spi2-core
             pango
-            xorg.libXcomposite
-            xorg.libXext
-            xorg.libXdamage
-            xorg.libXfixes
-            xorg.libxcb
-            xorg.libxshmfence
-            xorg.libXScrnSaver
-            xorg.libXtst
+            libXcomposite
+            libXext
+            libXdamage
+            libXfixes
+            libxcb
+            libxshmfence
+            libXScrnSaver
+            libXtst
 
             # Unity Hub additional dependencies
             libva
@@ -62,9 +62,9 @@
 
             # Unity Editor dependencies
             libglvnd # provides ligbl
-            xorg.libX11
-            xorg.libXcursor
-            xorg.libXrandr
+            libX11
+            libXcursor
+            libXrandr
             glib
             gdk-pixbuf
             libxml2_13
@@ -77,8 +77,8 @@
             vulkan-loader
 
             # Unity Bug Reporter specific dependencies
-            xorg.libICE
-            xorg.libSM
+            libICE
+            libSM
 
             # Fonts used by built-in and third party editor tools
             corefonts

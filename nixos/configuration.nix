@@ -29,11 +29,6 @@ in
     enable = true;
     openFirewall = true;
 
-    # Write information to /etc/xdg/openxr/1/active_runtime.json, VR applications
-    # will automatically read this and work with WiVRn (Note: This does not currently
-    # apply for games run in Valve's Proton)
-    defaultRuntime = true;
-
     # Run WiVRn as a systemd service on startup
     autoStart = true;
   
@@ -45,6 +40,7 @@ in
   hardware.opentabletdriver.enable = true;
   hardware.uinput.enable = true;
   boot.kernelModules = ["uinput"];
+  boot.kernelParams = [ "hostname=${vars.hostname}" ];
 
   nixpkgs.config.allowUnfree = true;
 
@@ -135,18 +131,27 @@ in
   # Enable Thunar
   programs.thunar.enable = true;
   programs.xfconf.enable = true;
-  programs.thunar.plugins = with pkgs.xfce; [
+  programs.thunar.plugins = with pkgs; [
     thunar-archive-plugin
     thunar-volman
     thunar-media-tags-plugin
   ];
 
+  services.samba = {
+    enable = true;
+    openFirewall = true;
+  };
+
   # Open ports in the firewall.
   networking.firewall.allowedTCPPorts = [
     57621  # Spotify local track sync
+    25565  # Minecraft
+    25575  # Minecraft
   ];
   networking.firewall.allowedUDPPorts = [
     5353  # Spotify Google Cast
+    25565  # Minecraft
+    25575  # Minecraft
   ];
 
   # Copy the NixOS configuration file and link it from the resulting system

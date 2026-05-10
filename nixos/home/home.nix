@@ -7,6 +7,7 @@ in
   home.username = vars.defaultUser;
   home.homeDirectory = "/home/${vars.defaultUser}";
   home.packages = with pkgs; [
+    hyprland
     alacritty
     bitwarden-desktop
     discord
@@ -21,6 +22,7 @@ in
     prismlauncher
     (olympus.override { celesteWrapper = "steam-run";})
     onlyoffice-desktopeditors
+    qbittorrent
     rose-pine-cursor
     rose-pine-hyprcursor
     spotify
@@ -28,6 +30,8 @@ in
     telegram-desktop
     unzip
     protontricks
+    vlc
+    jdk21
   ];
 
   programs.git = {
@@ -36,11 +40,11 @@ in
       user.name = vars.gitUsername;
       user.email = vars.gitEmail;
       init.defaultBranch = "main";
-      credential {
+      credential = {
       helper = "manager";
-      "https://github.com".username = "YourUserName";
+      "https://github.com".username = "SkyyWasTaken";
       credentialStore = "cache";
-      }
+      };
     };
   };
 

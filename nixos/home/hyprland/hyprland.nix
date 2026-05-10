@@ -5,7 +5,7 @@ in
   "$mod" = "SUPER";
   monitor = [
     "DP-3, 1920x1080@144, 0x0, 1"
-    "HDMI-A-1, 1920x1080@60, 1920x0, 1"
+    "HDMI-A-1, 1920x1080@120, 1920x0, 1"
     "DP-2, 1920x1080@60, 3840x0, 1"
   ];
   bind = [
@@ -116,7 +116,7 @@ in
     "HYPRCURSOR_SIZE,28"
     "EDITOR,code --wait"
   ];
-  windowrulev2 = [
-    "tile, class:^steam$"
+  windowrule = [
+    "tile on, match:class = ^steam$"
   ];
 }
