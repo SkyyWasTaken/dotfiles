@@ -26,7 +26,6 @@ in
     rose-pine-cursor
     rose-pine-hyprcursor
     spotify
-    steam
     telegram-desktop
     unzip
     protontricks
@@ -61,6 +60,7 @@ in
   programs.kitty.enable = true;
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = import ./hyprland/hyprland.nix;
+  wayland.windowManager.hyprland.configType = "hyprlang";
 
   services.gnome-keyring.enable = true;
 
